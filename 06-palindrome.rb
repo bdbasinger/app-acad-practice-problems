@@ -5,7 +5,12 @@
 #
 # Difficulty: easy.
 
+# Correct
 def palindrome?(string)
+  if string == string.reverse
+    return true
+  end
+  return false
 end
 
 # These are tests to check that your code is working. After writing

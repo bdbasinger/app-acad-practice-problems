@@ -3,7 +3,15 @@
 #
 # Difficulty: easy.
 
+
+# Correct
 def sum_nums(num)
+  result = 0
+  while num > 0
+    result += num
+    num -= 1
+  end
+  result
 end
 
 # These are tests to check that your code is working. After writing

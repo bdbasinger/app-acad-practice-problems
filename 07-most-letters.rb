@@ -4,8 +4,34 @@
 #
 # Difficulty: medium.
 
+# Special characters:
+# ^, $, ? , ., /, \, [, ], {, }, (, ), +, and *.
+
+# Correct
 def nearby_az(string)
+  if string.match(/a[a-z][a-z]z/) || string.match(/a[a-z]z/) || string.match(/az/)
+    return true
+  else
+    return false
+  end
+
+=begin
+  # viable alternative
+  if string.match(/a[a-z][a-z]z/)
+    return true
+  elsif string.match(/a[a-z]z/)
+    return true
+  elsif string.match(/az/)
+    return true
+  else
+    return false
+  end
+=end
+
 end
+
+#count += 1 if x =~ /[aeiou]/
+#count += 1 if x.match(/[aeiou]/)
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

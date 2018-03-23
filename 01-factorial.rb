@@ -5,8 +5,18 @@
 #
 # Difficulty: easy.
 
+# Correct
 def factorial(n)
+  if n == 0
+    return 1
+  elsif n == 1
+    return 1
+  else
+    return n * factorial(n - 1)
+  end
 end
+
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

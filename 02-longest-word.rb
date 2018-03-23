@@ -6,7 +6,16 @@
 #
 # Difficulty: easy.
 
+# Correct
 def longest_word(sentence)
+  result = ""
+  s = sentence.split(' ')
+  s.each do |x|
+    if x.length > result.length
+      result = x
+    end
+  end
+  result
 end
 
 # These are tests to check that your code is working. After writing

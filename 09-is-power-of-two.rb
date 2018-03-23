@@ -7,8 +7,27 @@
 #
 # Difficulty: medium.
 
+# 5, 9 16
 def is_power_of_two?(num)
+
+  if num <= 0
+    return false
+  end
+  if num == 1
+    return true
+  end
+  if num % 2 == 1
+    return false
+  end
+  x = num / 2
+  if x.odd?
+    return false
+  end
+  if num % 2 == 0
+    return true
+  end
 end
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

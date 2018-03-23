@@ -5,7 +5,15 @@
 #
 # Difficulty: easy.
 
+# Correct
 def reverse(string)
+  string = string.split('')
+  result = ""
+  string.each do |x|
+    result = x + result
+  end
+  puts result
+  result
 end
 
 # These are tests to check that your code is working. After writing
