@@ -16,24 +16,20 @@
 #
 # Difficulty: hard.
 
-def palindrome?(string)
-  i = 0
-  while i < string.length
-    if string[i] != string[(string.length - 1) - i]
-      return false
-    end
-
-    i += 1
-  end
-
-  return true
-end
 
 def longest_palindrome(string)
+  i = 0
+  j = 1
+  palindrome = ''
+  while j < string.length
+    if string.slice(i, j) == string.slice(i, j).reverse
+      palindrome = string.slice(i, j)
+    end
 end
+longest_palindrome("hannah")
 
-# These are tests to check that your code is working. After writing
-# your solution, they should all print true.
+# These are tests to check that your code is working.
+# After writing your solution, they should all print true.
 
 puts(
   'longest_palindrome("abcbd") == "bcb": ' +

@@ -12,7 +12,21 @@
 #
 # Difficulty: medium.
 
+
+# Correct
 def is_prime?(number)
+  i = 1
+  count = 0
+  while i <= number
+    if number % i == 0
+      count += 1
+    end
+    i += 1
+  end
+  if count > 2
+    return false
+  end
+  return true
 end
 
 # These are tests to check that your code is working. After writing

@@ -4,8 +4,7 @@
 #
 # Difficulty: medium.
 
-# each.with_index
-# each_with_index
+# Correct
 def two_sum(nums)
   i = 0
   while i < nums.length

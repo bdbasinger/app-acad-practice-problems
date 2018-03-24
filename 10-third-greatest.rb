@@ -4,6 +4,7 @@
 #
 # Difficulty: medium.
 
+# Correct
 def third_greatest(nums)
   result = nums.sort
   return result[-3]

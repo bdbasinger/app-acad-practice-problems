@@ -8,7 +8,14 @@
 #
 # Difficulty: medium.
 
+# Correct
 def capitalize_words(string)
+  str = string.split(' ')
+  str.collect! do |word|
+    word.capitalize
+  end
+  str = str.join(' ')
+  return str
 end
 
 # These are tests to check that your code is working. After writing

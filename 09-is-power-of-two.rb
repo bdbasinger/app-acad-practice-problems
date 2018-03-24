@@ -7,7 +7,7 @@
 #
 # Difficulty: medium.
 
-# 5, 9 16
+# Correct
 def is_power_of_two?(num)
 
   if num <= 0
