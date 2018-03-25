@@ -6,7 +6,21 @@
 #
 # Difficulty: hard.
 
+# Correct
 def num_repeats(string)
+  result = 0
+  count = Hash.new(0)
+  string = string.split('')
+  string.each do |key, value|
+    count[key] += 1
+  end
+  count = count.to_a
+  count.each do |x,y|
+    if y > 1
+      result += 1
+    end
+  end
+  result
 end
 
 # These are tests to check that your code is working. After writing

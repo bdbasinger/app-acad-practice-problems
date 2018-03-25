@@ -16,20 +16,35 @@
 #
 # Difficulty: hard.
 
+# (i, j)
+# (start_index, length)
 
+# Correct
 def longest_palindrome(string)
+  longest = ''
   i = 0
-  j = 1
-  palindrome = ''
-  while j < string.length
-    if string.slice(i, j) == string.slice(i, j).reverse
-      palindrome = string.slice(i, j)
+  while i < string.length
+    j = 1
+    while (i + j) <= string.length
+      x = string.slice(i, j)
+      if (x == x.reverse) && (x.length > longest.length)
+        longest = x
+      end
+      j += 1
     end
+    i += 1
+  end
+  longest
 end
-longest_palindrome("hannah")
+# Start with i as the start_index set to 0
+# Iterate through the word testin
+
 
 # These are tests to check that your code is working.
 # After writing your solution, they should all print true.
+
+puts longest_palindrome("bdehannahc")
+
 
 puts(
   'longest_palindrome("abcbd") == "bcb": ' +

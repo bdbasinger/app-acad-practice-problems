@@ -4,7 +4,17 @@
 #
 # Difficulty: medium.
 
+# Correct
 def greatest_common_factor(number1, number2)
+  num = 0
+  counter = 1
+  while counter <= number1
+    if (number1 % counter == 0) && (number2 % counter == 0)
+      num = counter
+    end
+    counter += 1
+  end
+  num
 end
 
 # These are tests to check that your code is working. After writing

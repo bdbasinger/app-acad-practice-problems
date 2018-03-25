@@ -23,8 +23,40 @@
 # Difficulty: hard. Because this problem relies on outside
 # information, we would not give it to you on the timed challenge. :-)
 
+
+# a == 97
+# w = 119
+# x = 120
+# y = 121
+# z == 122
+
+# Correct
 def caesar_cipher(offset, string)
+  a = 97
+  result = ""
+  string.each_char do |char|
+    if char.ord + offset > 122
+      number = char.ord + offset
+      i = number - 123
+      result << (a + i).chr
+    elsif char == " "
+      result += " "
+    else
+      number = char.ord + offset
+      result << number.chr
+    end
+  end
+  print result
+  return result
 end
+
+
+#puts "a".ord == 97
+#puts "z".ord == 122
+
+#puts 97.chr == a
+#puts 122.chr == z
+
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
