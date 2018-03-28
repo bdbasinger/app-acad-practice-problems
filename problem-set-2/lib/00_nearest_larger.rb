@@ -18,18 +18,13 @@
 # Take an array and an index
 # Return the index of the element that is the closest larger element
 def nearest_larger(arr, idx)
-  # Copy original array to hold as a reference
-  # Sort the original array to find the larger numbers
   larger = []
   reference = arr
   arr = arr.sort
   larger = arr.select { |num| num > reference[idx] && num}
-  # larger array now holds numbers in the array
-  # that are larger than the number at the index specified
   larger = larger.uniq
   reference.each do |x|
     larger.each do |num| #larger numbers found
-      # If a larger number is found
       if (x == num) && (larger.length >= 2)
         nums = reference.slice(reference.index(num)..idx) # (6,9,4)
         nums.reverse_each do |y|
