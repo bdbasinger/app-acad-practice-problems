@@ -11,6 +11,7 @@ require '06_word_unscrambler'
 #
 # Difficulty: 3/5
 
+
 describe "#word_unscrambler" do
   it "handles a simple word" do
     word_unscrambler("cat", ["tac"]).should == ["tac"]

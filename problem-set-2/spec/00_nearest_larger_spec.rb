@@ -4,6 +4,7 @@ require 'rspec'
 # Write a function, `nearest_larger(arr, i)` which takes an array and an
 # index.  The function should return another index, `j`: this should
 # satisfy:
+# arr[j] is the index being returned as the larger number
 #
 # (a) `arr[i] < arr[j]`, AND
 # (b) there is no `j2` closer to `i` than `j` where `arr[i] < arr[j2]`.
@@ -13,6 +14,7 @@ require 'rspec'
 # return `nil`.
 #
 # Difficulty: 2/5
+
 
 describe "#nearest_larger" do
   it "handles a simple case to the right" do

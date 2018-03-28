@@ -11,6 +11,9 @@ require 'rspec'
 # Difficulty: 1/5
 
 
+
+
+
 describe "#no_repeats" do
   it "should return a no repeat year" do
     no_repeats(1234, 1234).should == [1234]
